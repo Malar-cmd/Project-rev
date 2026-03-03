@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Python → Java IDE</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+</head>
+<body>
+
+<div id="editor"></div>
+<div id="pythonModal" class="modal">
+  <div class="modal-content">
+    <h3>Enter Python Code</h3>
+    <textarea id="pythonInput"></textarea>
+    <div class="modal-buttons">
+      <button id="translateBtn">Translate</button>
+      <button id="cancelBtn">Cancel</button>
+    </div>
+  </div>
+</div>
+<button id="runBtn">▶ Run</button>
+
+<pre id="console"></pre>
+
+<script src="editor.js"></script>
+</body>
+</html>
