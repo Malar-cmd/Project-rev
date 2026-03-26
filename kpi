@@ -1,0 +1,108 @@
+-------------------------- KPIS -----------------------------------
+
+
+
+**Hint**: Create a separate calendar table to store all quarterly, halfyearly data for a particular month for easy processing
+
+
+1. Encounter Mix by Encounter Class:
+
+	**Definition:**
+
+   	For each **quarter**, calculate the percentage of encounters by EncounterClass (ambulatory, emergency, inpatient, etc.).
+
+
+
+------
+
+2. Encounters Over 24 Hours vs Under 24 Hours (%):
+
+	**Definition:**
+
+    Percentage split of encounters lasting (Get this **monthly** view ):
+
+        - More than 24 hours
+        - 24 hours or less
+----------
+
+
+3. Zero Payer Coverage Rate:
+
+    **Definition**:
+
+    Break down by payer **monthly**:
+
+        - Count of encounters 
+
+        - Count of encounters with zero payer coverage
+
+        - Percentage of total encounters with no coverage
+
+        - Percentage of total encounters with coverage
+
+----------
+
+4. Top 10 Procedures by Highest Average Base Cost:
+
+	**Definition:**
+
+    Rank procedures by average Base\_Cost ( Halfyearly )  and show:
+
+        - Procedure
+        - Avg cost
+        - Number of times performed
+
+------------
+
+5. Average total claim cost for encounters, broken down by payer?
+
+	**Definition:**
+
+    Get avg total claim cost by encounter and payers ( Whole data set, not mothly/quaterly/yearly)
+
+-------------
+
+6. 30-Day Patient Readmission Rate - (Bonus - Try understanding it and solve it)
+
+	**Definition:**
+
+        Readmission Rate = no of 30 day readmissions in the month / total no of eligible admission in the month
+
+	A 30-day readmission is identified when all the following conditions are met:
+	
+
+	**Eligible Encounter – Definition**
+
+		An encounter is considered eligible for readmission analysis if both of the following conditions are met:
+
+	1. The patient has a previous encounter recorded in the dataset.
+
+	2. The start date of the current encounter is on or after the end date of the patient’s previous encounter.
+
+	3. The first encounter for a patient cannot be classified as a eligible.
+
+
+	**Readmission – Definition** 
+
+	1. An encounter is classified as a 30-day readmission if all of the following conditions are met:
+	2. The time between the end of the previous encounter and the start of the current encounter is 30 		calendar days or fewer.
+		
+	3. The first encounter for a patient cannot be classified as a readmission.
+
+
+	
+	Final Table should somewhat look like this:
+
+
+ 	    	| Month   | Eligible Encounters | Readmissions | Readmission Rate |
+
+ 		| ------- | ------------------- | ------------ | ---------------- |
+
+ 		| 2024-01 | 1                   | 1            | 100%             |
+
+ 		| 2024-02 | 1                   | 0            | 0%               |
+
+ 		| 2024-03 | 1                   | 0            | 0%               |
+
+
+
